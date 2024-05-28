@@ -1,0 +1,101 @@
+[ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 3; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 4; ]
+using Toybox.Graphics;
+[ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 5; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 7; ]
+module Rez {
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 8; ]
+    module Drawables {
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 9; @position = 27; initialized = true; ]
+        var LauncherIcon as Symbol;
+    }
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 12; ]
+    module Fonts {
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 12; ]
+        <init> {
+        }
+    }
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 15; ]
+    module JsonData {
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 15; ]
+        <init> {
+        }
+    }
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 18; ]
+    module Layouts {
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 18; ]
+        <init> {
+        }
+    }
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 21; ]
+    module Menus {
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 21; ]
+        <init> {
+        }
+    }
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 24; ]
+    module Strings {
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 24; ]
+        <init> {
+        }
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 25; @position = 27; initialized = true; ]
+        var dispElapsed as Symbol;
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 26; @position = 27; initialized = true; ]
+        var appVersion as Symbol;
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 27; @position = 27; initialized = true; ]
+        var dispCRSwap as Symbol;
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 28; @position = 27; initialized = true; ]
+        var spdUSER as Symbol;
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 29; @position = 27; initialized = true; ]
+        var spdGFONDO as Symbol;
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 30; @position = 27; initialized = true; ]
+        var dispDF_title as Symbol;
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 31; @position = 27; initialized = true; ]
+        var nearDest as Symbol;
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 32; @position = 27; initialized = true; ]
+        var spdBRM200 as Symbol;
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 33; @position = 27; initialized = true; ]
+        var dispERSwap as Symbol;
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 34; @position = 27; initialized = true; ]
+        var topRight_title as Symbol;
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 35; @position = 27; initialized = true; ]
+        var battery_title as Symbol;
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 36; @position = 27; initialized = true; ]
+        var AppName as Symbol;
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 37; @position = 27; initialized = true; ]
+        var spdBRMGR as Symbol;
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 38; @position = 27; initialized = true; ]
+        var targetSpeed_title as Symbol;
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 39; @position = 27; initialized = true; ]
+        var dist2Dest_title as Symbol;
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 40; @position = 27; initialized = true; ]
+        var useDist2Dest_title as Symbol;
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 41; @position = 27; initialized = true; ]
+        var spdBRMSR as Symbol;
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 42; @position = 27; initialized = true; ]
+        var dispTime as Symbol;
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 43; @position = 27; initialized = true; ]
+        var dispRemain as Symbol;
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 44; @position = 27; initialized = true; ]
+        var dispCESwap as Symbol;
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 45; @position = 27; initialized = true; ]
+        var targetspeed_title as Symbol;
+        [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 46; @position = 27; initialized = true; ]
+        var userSPEED_title as Symbol;
+    }
+}
+[ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\bin\gen\no-device\source\Rez.mcgen"; @line = 1; ]
+<init> {
+}

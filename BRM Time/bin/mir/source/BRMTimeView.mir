@@ -1,0 +1,1849 @@
+[ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 1; ]
+import Toybox.Activity;
+[ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 2; ]
+import Toybox.Application;
+[ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 3; ]
+import Toybox.Graphics;
+[ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 4; ]
+import Toybox.Lang;
+[ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 5; ]
+import Toybox.Math;
+[ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 6; ]
+import Toybox.System;
+[ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 7; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 9; ]
+class BRMTimeView extends WatchUi.DataField{
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 9; ]
+    <init> {
+    }
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 9; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 11; @position = 12; ]
+    protected
+    var tt as Numeric;
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 13; @position = 12; ]
+    protected
+    var dfWidth as Numeric;
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 14; @position = 12; ]
+    protected
+    var dfHeight as Numeric;
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 16; @position = 12; ]
+    protected
+    var dispDF as Numeric;
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 17; @position = 12; ]
+    protected
+    var dispTR as Numeric;
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 19; @position = 12; ]
+    protected
+    var tgSpd as Numeric;
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 21; @position = 12; ]
+    protected
+    var maxDis as Numeric;
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 22; @position = 12; ]
+    protected
+    var gtDis as Numeric;
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 23; @position = 12; ]
+    protected
+    var elsdDis as Numeric;
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 24; @position = 12; ]
+    protected
+    var elsdTime as Numeric;
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 26; @position = 12; ]
+    protected
+    var limitTime as Numeric;
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 27; @position = 12; ]
+    protected
+    var remains as Numeric;
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 29; @position = 12; ]
+    protected
+    var edgeModel as Numeric;
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 31; ]
+    function initialize() as Void {
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_31_26_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 32 8 ]
+        %tmp.2 = getv ? :DataField;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 33 8 ]
+        %tmp.4 = 0;
+        putv self :tt %tmp.4;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 35 8 ]
+        %tmp.5 = 140;
+        putv self :dfWidth %tmp.5;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 36 8 ]
+        %tmp.6 = 92;
+        putv self :dfHeight %tmp.6;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 38 8 ]
+        %tmp.7 = 0;
+        putv self :dispDF %tmp.7;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 39 8 ]
+        %tmp.8 = 0;
+        putv self :dispTR %tmp.8;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 41 8 ]
+        %tmp.9 = 0.0f;
+        putv self :tgSpd %tmp.9;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 42 8 ]
+        %tmp.10 = 0.0f;
+        putv self :maxDis %tmp.10;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 43 8 ]
+        %tmp.11 = 0.0f;
+        putv self :gtDis %tmp.11;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 44 8 ]
+        %tmp.12 = 0.0f;
+        putv self :elsdDis %tmp.12;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 45 8 ]
+        %tmp.13 = 0.0f;
+        putv self :elsdTime %tmp.13;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 47 8 ]
+        %tmp.14 = 0;
+        putv self :limitTime %tmp.14;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 48 8 ]
+        %tmp.15 = 0;
+        putv self :remains %tmp.15;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 50 8 ]
+        %tmp.16 = 0;
+        putv self :edgeModel %tmp.16;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_31_26_stop:
+    }
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 53; ]
+    function onLayout(dc as Dc) as Void {
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_53_40_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 54 5 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :getWidth;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        putv self :dfWidth %tmp.3;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 55 5 ]
+        %tmp.4 = lgetv %dc;
+        %tmp.5 = getv function %tmp.4 :getHeight;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        putv self :dfHeight %tmp.6;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 56 5 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_53_40_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_53_40_stop" ]
+        %fHeight.1 = local;
+        %tmp.7 = lgetv %dc;
+        %tmp.8 = getv function %tmp.7 :getFontHeight;
+        %tmp.9 = getm $.Toybox.Graphics;
+        %tmp.10 = getv %tmp.9 :FONT_NUMBER_MEDIUM;
+        %tmp.11 = invoke %tmp.7 %tmp.8(%tmp.10);
+        lputv %fHeight.1 %tmp.11;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 57 5 ]
+        %tmp.13 = getv ? :dfWidth;
+        push %tmp.13;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_57_5_switchStmtBegin:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 58 5 ]
+        %tmp.14 = dup %tmp.13;
+        %tmp.15 = 140;
+        %tmp.16 = getv function %tmp.14 :equals;
+        %tmp.17 = invoke %tmp.14 %tmp.16 (%tmp.15);
+        bt %tmp.17 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_58_5_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 59 5 ]
+        %tmp.18 = dup %tmp.13;
+        %tmp.19 = 282;
+        %tmp.20 = getv function %tmp.18 :equals;
+        %tmp.21 = invoke %tmp.18 %tmp.20 (%tmp.19);
+        bt %tmp.21 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_59_5_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 63 2 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_57_5_defaultCodeBegin;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_58_5_switchCase:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_59_5_switchCase:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 60 6 ]
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_60_6_if_stmt:
+        %tmp.23 = lgetv %fHeight.1;
+        %tmp.24 = 48;
+        %tmp.25 = eq %tmp.23 %tmp.24;
+        bf %tmp.25 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_60_6_if_false;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_60_6_if_true:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_60_25_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 60 27 ]
+        %tmp.26 = 1040;
+        putv self :edgeModel %tmp.26;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_60_25_stop:
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_60_6_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_60_6_if_false:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_61_11_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 61 13 ]
+        %tmp.27 = 1030;
+        putv self :edgeModel %tmp.27;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_61_11_stop:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_60_6_if_end:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 62 3 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_57_5_switchStmtEnd;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_63_2_switchCase:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_57_5_defaultCodeBegin:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_57_5_switchStmtEnd:
+        pop;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 65 5 ]
+        %tmp.28 = self;
+        %tmp.29 = getv function %tmp.28 :readProperties;
+        invoke %tmp.28 %tmp.29();
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_53_40_stop:
+    }
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 68; ]
+    function readProperties() {
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_68_27_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 70 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_68_27_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_68_27_stop" ]
+        %targetSpd.1 = local;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 71 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_68_27_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_68_27_stop" ]
+        %userSpd.2 = local;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 72 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_68_27_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_68_27_stop" ]
+        %useDist2Dest.3 = local;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 73 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_68_27_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_68_27_stop" ]
+        %dist2Dest.4 = local;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 74 5 ]
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_74_5_if_stmt:
+        %tmp.2 = getm $.Toybox.Application;
+        %tmp.4 = const :Properties;
+        %tmp.5 = canhazplz %tmp.2 %tmp.4;
+        bf %tmp.5 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_74_5_if_false;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_74_5_if_true:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_74_38_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 75 6 ]
+        %tmp.6 = getm $.Toybox.Application;
+        %tmp.7 = getv %tmp.6 :Properties;
+        %tmp.8 = getv function %tmp.7 :getValue;
+        %tmp.9 = "dispDF";
+        %tmp.10 = invoke %tmp.7 %tmp.8(%tmp.9);
+        putv self :dispDF %tmp.10;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 76 6 ]
+        %tmp.11 = getm $.Toybox.Application;
+        %tmp.12 = getv %tmp.11 :Properties;
+        %tmp.13 = getv function %tmp.12 :getValue;
+        %tmp.14 = "topRight";
+        %tmp.15 = invoke %tmp.12 %tmp.13(%tmp.14);
+        putv self :dispTR %tmp.15;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 77 6 ]
+        %tmp.16 = getm $.Toybox.Application;
+        %tmp.17 = getv %tmp.16 :Properties;
+        %tmp.18 = getv function %tmp.17 :getValue;
+        %tmp.19 = "targetSpeed";
+        %tmp.20 = invoke %tmp.17 %tmp.18(%tmp.19);
+        lputv %targetSpd.1 %tmp.20;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 78 6 ]
+        %tmp.21 = getm $.Toybox.Application;
+        %tmp.22 = getv %tmp.21 :Properties;
+        %tmp.23 = getv function %tmp.22 :getValue;
+        %tmp.24 = "userSPEED";
+        %tmp.25 = invoke %tmp.22 %tmp.23(%tmp.24);
+        %tmp.26 = getv function %tmp.25 :toFloat;
+        %tmp.27 = invoke %tmp.25 %tmp.26();
+        lputv %userSpd.2 %tmp.27;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 79 3 ]
+        %tmp.28 = getm $.Toybox.Application;
+        %tmp.29 = getv %tmp.28 :Properties;
+        %tmp.30 = getv function %tmp.29 :getValue;
+        %tmp.31 = "useDist2Dest";
+        %tmp.32 = invoke %tmp.29 %tmp.30(%tmp.31);
+        lputv %useDist2Dest.3 %tmp.32;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 80 3 ]
+        %tmp.33 = getm $.Toybox.Application;
+        %tmp.34 = getv %tmp.33 :Properties;
+        %tmp.35 = getv function %tmp.34 :getValue;
+        %tmp.36 = "dist2Dest";
+        %tmp.37 = invoke %tmp.34 %tmp.35(%tmp.36);
+        %tmp.38 = getv function %tmp.37 :toFloat;
+        %tmp.39 = invoke %tmp.37 %tmp.38();
+        %tmp.40 = 1000.0f;
+        %tmp.41 = mul %tmp.39 %tmp.40;
+        lputv %dist2Dest.4 %tmp.41;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_74_38_stop:
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_74_5_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_74_5_if_false:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_81_12_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 82 6 ]
+        %tmp.42 = 2;
+        putv self :dispDF %tmp.42;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 83 6 ]
+        %tmp.43 = 0;
+        putv self :dispTR %tmp.43;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 84 6 ]
+        %tmp.44 = 0.0f;
+        lputv %targetSpd.1 %tmp.44;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 85 6 ]
+        %tmp.45 = 0.0f;
+        lputv %userSpd.2 %tmp.45;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 86 6 ]
+        %tmp.46 = false;
+        lputv %useDist2Dest.3 %tmp.46;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 87 6 ]
+        %tmp.47 = 0.0f;
+        lputv %dist2Dest.4 %tmp.47;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_81_12_stop:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_74_5_if_end:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 89 5 ]
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_89_5_if_stmt:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_89_9_begin:
+        %tmp.49 = lgetv %targetSpd.1;
+        %tmp.50 = 0;
+        %tmp.51 = ne %tmp.49 %tmp.50;
+        %tmp.52 = dup %tmp.51;
+        bf %tmp.52 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_89_27_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_89_27_true:
+        %tmp.54 = lgetv %userSpd.2;
+        %tmp.55 = 0;
+        %tmp.56 = ne %tmp.54 %tmp.55;
+        %tmp.57 = and %tmp.51 %tmp.56;
+        push %tmp.57;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_89_27_end:
+        %tmp.58 = phi [%tmp.52 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_89_9_begin] [%tmp.57 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_89_27_true] [%tmp.58 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_89_27_end];
+        bf %tmp.58 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_89_5_if_false;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_89_5_if_true:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_89_41_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 90 6 ]
+        %tmp.60 = lgetv %targetSpd.1;
+        push %tmp.60;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_90_6_switchStmtBegin:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 91 7 ]
+        %tmp.61 = dup %tmp.60;
+        %tmp.62 = 0;
+        %tmp.63 = getv function %tmp.61 :equals;
+        %tmp.64 = invoke %tmp.61 %tmp.63 (%tmp.62);
+        bt %tmp.64 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_91_7_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 94 7 ]
+        %tmp.65 = dup %tmp.60;
+        %tmp.66 = 1;
+        %tmp.67 = getv function %tmp.65 :equals;
+        %tmp.68 = invoke %tmp.65 %tmp.67 (%tmp.66);
+        bt %tmp.68 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_94_7_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 97 7 ]
+        %tmp.69 = dup %tmp.60;
+        %tmp.70 = 2;
+        %tmp.71 = getv function %tmp.69 :equals;
+        %tmp.72 = invoke %tmp.69 %tmp.71 (%tmp.70);
+        bt %tmp.72 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_97_7_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 100 7 ]
+        %tmp.73 = dup %tmp.60;
+        %tmp.74 = 3;
+        %tmp.75 = getv function %tmp.73 :equals;
+        %tmp.76 = invoke %tmp.73 %tmp.75 (%tmp.74);
+        bt %tmp.76 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_100_7_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 103 7 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_90_6_defaultCodeBegin;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_91_7_switchCase:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 92 8 ]
+        %tmp.77 = 15.0f;
+        putv self :tgSpd %tmp.77;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 93 8 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_90_6_switchStmtEnd;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_94_7_switchCase:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 95 8 ]
+        %tmp.78 = 13.33f;
+        putv self :tgSpd %tmp.78;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 96 8 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_90_6_switchStmtEnd;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_97_7_switchCase:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 98 8 ]
+        %tmp.79 = 10.0f;
+        putv self :tgSpd %tmp.79;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 99 8 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_90_6_switchStmtEnd;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_100_7_switchCase:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 101 8 ]
+        %tmp.80 = 18.0f;
+        putv self :tgSpd %tmp.80;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 102 8 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_90_6_switchStmtEnd;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_103_7_switchCase:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_90_6_defaultCodeBegin:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 104 8 ]
+        %tmp.82 = lgetv %userSpd.2;
+        putv self :tgSpd %tmp.82;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_90_6_switchStmtEnd:
+        pop;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_89_41_stop:
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_89_5_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_89_5_if_false:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_106_12_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 107 6 ]
+        %tmp.83 = 15.0f;
+        putv self :tgSpd %tmp.83;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_106_12_stop:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_89_5_if_end:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 109 5 ]
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_109_5_if_stmt:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_109_9_begin:
+        %tmp.85 = lgetv %dist2Dest.4;
+        %tmp.86 = 0;
+        %tmp.87 = ne %tmp.85 %tmp.86;
+        %tmp.88 = dup %tmp.87;
+        bf %tmp.88 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_109_27_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_109_27_true:
+        %tmp.90 = lgetv %useDist2Dest.3;
+        %tmp.91 = and %tmp.87 %tmp.90;
+        push %tmp.91;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_109_27_end:
+        %tmp.92 = phi [%tmp.88 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_109_9_begin] [%tmp.91 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_109_27_true] [%tmp.92 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_109_27_end];
+        bf %tmp.92 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_109_5_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_109_5_if_true:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_109_41_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 110 6 ]
+        %tmp.94 = lgetv %dist2Dest.4;
+        putv self :maxDis %tmp.94;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_109_41_stop:
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_109_5_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_109_5_if_end:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_68_27_stop:
+    }
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 114; ]
+    function compute(info as Activity.Info) as Void {
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_114_52_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 115 2 ]
+        %tmp.3 = getv ? :tt;
+        %tmp.4 = add %tmp.3 1;
+        putv self :tt dup %tmp.4;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 116 2 ]
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_116_2_if_stmt:
+        %tmp.6 = getv ? :tt;
+        %tmp.7 = 5;
+        %tmp.8 = gt %tmp.6 %tmp.7;
+        bf %tmp.8 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_116_2_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_116_2_if_true:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_116_12_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 116 14 ]
+        %tmp.9 = 0;
+        putv self :tt %tmp.9;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_116_12_stop:
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_116_2_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_116_2_if_end:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 119 2 ]
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_119_2_if_stmt:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_119_6_begin:
+        %tmp.11 = lgetv %info;
+        %tmp.13 = const :distanceToDestination;
+        %tmp.14 = canhazplz %tmp.11 %tmp.13;
+        %tmp.15 = dup %tmp.14;
+        bf %tmp.15 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_119_41_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_119_41_true:
+        %tmp.16 = lgetv %info;
+        %tmp.17 = as %tmp.16 { (interface { var distanceToDestination; }) };
+        %tmp.18 = getv %tmp.17 :distanceToDestination;
+        %tmp.19 = null;
+        %tmp.20 = ne %tmp.18 %tmp.19;
+        %tmp.21 = and %tmp.14 %tmp.20;
+        push %tmp.21;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_119_41_end:
+        %tmp.22 = phi [%tmp.15 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_119_6_begin] [%tmp.21 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_119_41_true] [%tmp.22 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_119_41_end];
+        bf %tmp.22 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_119_2_if_false;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_119_2_if_true:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_119_77_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 120 3 ]
+        %tmp.23 = lgetv %info;
+        %tmp.24 = as %tmp.23 { (interface { var distanceToDestination; }) };
+        %tmp.25 = getv %tmp.24 :distanceToDestination;
+        putv self :gtDis %tmp.25;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_119_77_stop:
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_119_2_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_119_2_if_false:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_121_9_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 121 11 ]
+        %tmp.26 = 0.0f;
+        putv self :gtDis %tmp.26;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_121_9_stop:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_119_2_if_end:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 124 2 ]
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_124_2_if_stmt:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_124_6_begin:
+        %tmp.28 = lgetv %info;
+        %tmp.30 = const :elapsedDistance;
+        %tmp.31 = canhazplz %tmp.28 %tmp.30;
+        %tmp.32 = dup %tmp.31;
+        bf %tmp.32 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_124_35_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_124_35_true:
+        %tmp.33 = lgetv %info;
+        %tmp.34 = as %tmp.33 { (interface { var elapsedDistance; }) };
+        %tmp.35 = getv %tmp.34 :elapsedDistance;
+        %tmp.36 = null;
+        %tmp.37 = ne %tmp.35 %tmp.36;
+        %tmp.38 = and %tmp.31 %tmp.37;
+        push %tmp.38;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_124_35_end:
+        %tmp.39 = phi [%tmp.32 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_124_6_begin] [%tmp.38 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_124_35_true] [%tmp.39 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_124_35_end];
+        bf %tmp.39 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_124_2_if_false;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_124_2_if_true:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_124_65_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 125 3 ]
+        %tmp.40 = lgetv %info;
+        %tmp.41 = as %tmp.40 { (interface { var elapsedDistance; }) };
+        %tmp.42 = getv %tmp.41 :elapsedDistance;
+        putv self :elsdDis %tmp.42;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_124_65_stop:
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_124_2_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_124_2_if_false:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_126_9_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 126 11 ]
+        %tmp.43 = 0.0f;
+        putv self :elsdDis %tmp.43;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_126_9_stop:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_124_2_if_end:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 128 2 ]
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_128_2_if_stmt:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_128_6_begin:
+        %tmp.45 = lgetv %info;
+        %tmp.47 = const :elapsedTime;
+        %tmp.48 = canhazplz %tmp.45 %tmp.47;
+        %tmp.49 = dup %tmp.48;
+        bf %tmp.49 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_128_31_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_128_31_true:
+        %tmp.50 = lgetv %info;
+        %tmp.51 = as %tmp.50 { (interface { var elapsedTime; }) };
+        %tmp.52 = getv %tmp.51 :elapsedTime;
+        %tmp.53 = null;
+        %tmp.54 = ne %tmp.52 %tmp.53;
+        %tmp.55 = and %tmp.48 %tmp.54;
+        push %tmp.55;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_128_31_end:
+        %tmp.56 = phi [%tmp.49 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_128_6_begin] [%tmp.55 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_128_31_true] [%tmp.56 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_128_31_end];
+        bf %tmp.56 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_128_2_if_false;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_128_2_if_true:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_128_57_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 129 3 ]
+        %tmp.57 = lgetv %info;
+        %tmp.58 = as %tmp.57 { (interface { var elapsedTime; }) };
+        %tmp.59 = getv %tmp.58 :elapsedTime;
+        %tmp.60 = getv function %tmp.59 :toFloat;
+        %tmp.61 = invoke %tmp.59 %tmp.60();
+        %tmp.62 = 1000.0f;
+        %tmp.63 = div %tmp.61 %tmp.62;
+        putv self :elsdTime %tmp.63;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_128_57_stop:
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_128_2_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_128_2_if_false:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_130_9_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 130 11 ]
+        %tmp.64 = 0.0f;
+        putv self :elsdTime %tmp.64;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_130_9_stop:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_128_2_if_end:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 132 2 ]
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_132_2_if_stmt:
+        %tmp.66 = getv ? :maxDis;
+        %tmp.68 = getv ? :gtDis;
+        %tmp.69 = lt %tmp.66 %tmp.68;
+        bf %tmp.69 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_132_2_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_132_2_if_true:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_132_22_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 133 3 ]
+        %tmp.71 = getv ? :gtDis;
+        putv self :maxDis %tmp.71;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_132_22_stop:
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_132_2_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_132_2_if_end:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 137 2 ]
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_137_2_if_stmt:
+        %tmp.73 = getv ? :maxDis;
+        %tmp.74 = 0;
+        %tmp.75 = gt %tmp.73 %tmp.74;
+        bf %tmp.75 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_137_2_if_false;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_137_2_if_true:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_137_17_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 138 3 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_137_17_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_137_17_stop" ]
+        %totalTime.1 = local;
+        %tmp.76 = getm $.Toybox.Math;
+        %tmp.77 = getv function %tmp.76 :round;
+        %tmp.79 = getv ? :maxDis;
+        %tmp.80 = 1000.0;
+        %tmp.81 = div %tmp.79 %tmp.80;
+        %tmp.83 = getv ? :tgSpd;
+        %tmp.84 = div %tmp.81 %tmp.83;
+        %tmp.85 = 60.0f;
+        %tmp.86 = mul %tmp.84 %tmp.85;
+        %tmp.87 = invoke %tmp.76 %tmp.77(%tmp.86);
+        %tmp.88 = getv function %tmp.87 :toNumber;
+        %tmp.89 = invoke %tmp.87 %tmp.88();
+        lputv %totalTime.1 %tmp.89;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 139 3 ]
+        %tmp.91 = lgetv %totalTime.1;
+        putv self :limitTime %tmp.91;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_137_17_stop:
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_137_2_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_137_2_if_false:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_140_9_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 140 11 ]
+        %tmp.92 = 0;
+        putv self :limitTime %tmp.92;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_140_9_stop:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_137_2_if_end:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 143 2 ]
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_143_2_if_stmt:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_143_6_begin:
+        %tmp.94 = getv ? :gtDis;
+        %tmp.95 = 100;
+        %tmp.96 = gt %tmp.94 %tmp.95;
+        %tmp.97 = dup %tmp.96;
+        bf %tmp.97 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_143_21_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_143_21_true:
+        %tmp.99 = getv ? :limitTime;
+        %tmp.100 = 0;
+        %tmp.101 = gt %tmp.99 %tmp.100;
+        %tmp.102 = and %tmp.96 %tmp.101;
+        push %tmp.102;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_143_21_end:
+        %tmp.103 = phi [%tmp.97 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_143_6_begin] [%tmp.102 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_143_21_true] [%tmp.103 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_143_21_end];
+        bf %tmp.103 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_143_2_if_false;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_143_2_if_true:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_143_35_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 144 3 ]
+        %tmp.105 = getv ? :limitTime;
+        %tmp.107 = getv ? :elsdTime;
+        %tmp.108 = 60;
+        %tmp.109 = div %tmp.107 %tmp.108;
+        %tmp.110 = sub %tmp.105 %tmp.109;
+        %tmp.111 = getv function %tmp.110 :toNumber;
+        %tmp.112 = invoke %tmp.110 %tmp.111();
+        putv self :remains %tmp.112;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_143_35_stop:
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_143_2_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_143_2_if_false:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 145 9 ]
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_145_9_if_stmt:
+        %tmp.114 = getv ? :gtDis;
+        %tmp.115 = 0;
+        %tmp.116 = eq %tmp.114 %tmp.115;
+        bf %tmp.116 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_145_9_if_false;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_145_9_if_true:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_145_25_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 146 3 ]
+        %tmp.117 = 1;
+        putv self :remains %tmp.117;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_145_25_stop:
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_145_9_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_145_9_if_false:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_147_9_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 148 3 ]
+        %tmp.118 = 0;
+        putv self :remains %tmp.118;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_147_9_stop:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_145_9_if_end:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_143_2_if_end:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_114_52_stop:
+    }
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 153; ]
+    function onUpdate(dc as Dc) as Void {
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 155 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_stop" ]
+        %backgroundColor.1 = local;
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :getBackgroundColor;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %backgroundColor.1 %tmp.3;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 156 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_stop" ]
+        %txtColor.2 = local;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 158 2 ]
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_158_2_if_stmt:
+        %tmp.5 = lgetv %backgroundColor.1;
+        %tmp.6 = getm $.Toybox.Graphics;
+        %tmp.7 = getv %tmp.6 :COLOR_BLACK;
+        %tmp.8 = eq %tmp.5 %tmp.7;
+        bf %tmp.8 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_158_2_if_false;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_158_2_if_true:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_158_47_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 159 3 ]
+        %tmp.9 = getm $.Toybox.Graphics;
+        %tmp.10 = getv %tmp.9 :COLOR_WHITE;
+        lputv %txtColor.2 %tmp.10;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_158_47_stop:
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_158_2_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_158_2_if_false:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_160_9_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 161 3 ]
+        %tmp.11 = getm $.Toybox.Graphics;
+        %tmp.12 = getv %tmp.11 :COLOR_BLACK;
+        lputv %txtColor.2 %tmp.12;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_160_9_stop:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_158_2_if_end:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 165 2 ]
+        %tmp.13 = lgetv %dc;
+        %tmp.14 = getv function %tmp.13 :setColor;
+        %tmp.16 = lgetv %txtColor.2;
+        %tmp.18 = lgetv %backgroundColor.1;
+        invoke %tmp.13 %tmp.14(%tmp.16, %tmp.18);
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 166 2 ]
+        %tmp.19 = lgetv %dc;
+        %tmp.20 = getv function %tmp.19 :clear;
+        invoke %tmp.19 %tmp.20();
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 168 2 ]
+        %tmp.21 = lgetv %dc;
+        %tmp.22 = getv function %tmp.21 :setColor;
+        %tmp.24 = lgetv %txtColor.2;
+        %tmp.25 = -1;
+        invoke %tmp.21 %tmp.22(%tmp.24, %tmp.25);
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 170 2 ]
+        %tmp.26 = lgetv %dc;
+        %tmp.27 = getv function %tmp.26 :getWidth;
+        %tmp.28 = invoke %tmp.26 %tmp.27();
+        putv self :dfWidth %tmp.28;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 171 2 ]
+        %tmp.29 = lgetv %dc;
+        %tmp.30 = getv function %tmp.29 :getHeight;
+        %tmp.31 = invoke %tmp.29 %tmp.30();
+        putv self :dfHeight %tmp.31;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 173 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_stop" ]
+        %center.3 = local;
+        %tmp.33 = getv ? :dfWidth;
+        %tmp.34 = 0.5;
+        %tmp.35 = mul %tmp.33 %tmp.34;
+        lputv %center.3 %tmp.35;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 174 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_stop" ]
+        %vcenter.4 = local;
+        %tmp.37 = getv ? :dfHeight;
+        %tmp.38 = 0.7;
+        %tmp.39 = mul %tmp.37 %tmp.38;
+        lputv %vcenter.4 %tmp.39;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 176 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_stop" ]
+        %clockTime.5 = local;
+        %tmp.40 = getm $.Toybox.System;
+        %tmp.41 = getv function %tmp.40 :getClockTime;
+        %tmp.42 = invoke %tmp.40 %tmp.41();
+        lputv %clockTime.5 %tmp.42;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 177 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_stop" ]
+        %timeHH.6 = local;
+        %tmp.43 = 0;
+        lputv %timeHH.6 %tmp.43;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 178 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_stop" ]
+        %timeMM.7 = local;
+        %tmp.44 = 0;
+        lputv %timeMM.7 %tmp.44;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 181 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_stop" ]
+        %elTime.8 = local;
+        %tmp.45 = 0;
+        lputv %elTime.8 %tmp.45;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 182 2 ]
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_182_2_if_stmt:
+        %tmp.47 = getv ? :elsdTime;
+        %tmp.48 = 3600;
+        %tmp.49 = gt %tmp.47 %tmp.48;
+        bf %tmp.49 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_182_2_if_false;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_182_2_if_true:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_182_23_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 183 3 ]
+        %tmp.51 = getv ? :elsdTime;
+        %tmp.52 = 60;
+        %tmp.53 = div %tmp.51 %tmp.52;
+        %tmp.54 = getv function %tmp.53 :toNumber;
+        %tmp.55 = invoke %tmp.53 %tmp.54();
+        lputv %elTime.8 %tmp.55;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_182_23_stop:
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_182_2_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_182_2_if_false:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_184_9_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 185 3 ]
+        %tmp.57 = getv ? :elsdTime;
+        %tmp.58 = getv function %tmp.57 :toNumber;
+        %tmp.59 = invoke %tmp.57 %tmp.58();
+        lputv %elTime.8 %tmp.59;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_184_9_stop:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_182_2_if_end:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 187 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_stop" ]
+        %isNotDest.9 = local;
+        %tmp.61 = getv ? :remains;
+        %tmp.62 = 0;
+        %tmp.63 = gt %tmp.61 %tmp.62;
+        lputv %isNotDest.9 %tmp.63;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 190 2 ]
+        %tmp.65 = getv ? :dispDF;
+        push %tmp.65;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_190_2_switchStmtBegin:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 192 3 ]
+        %tmp.66 = dup %tmp.65;
+        %tmp.67 = 0;
+        %tmp.68 = getv function %tmp.66 :equals;
+        %tmp.69 = invoke %tmp.66 %tmp.68 (%tmp.67);
+        bt %tmp.69 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_192_3_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 197 3 ]
+        %tmp.70 = dup %tmp.65;
+        %tmp.71 = 1;
+        %tmp.72 = getv function %tmp.70 :equals;
+        %tmp.73 = invoke %tmp.70 %tmp.72 (%tmp.71);
+        bt %tmp.73 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_197_3_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 204 3 ]
+        %tmp.74 = dup %tmp.65;
+        %tmp.75 = 2;
+        %tmp.76 = getv function %tmp.74 :equals;
+        %tmp.77 = invoke %tmp.74 %tmp.76 (%tmp.75);
+        bt %tmp.77 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_204_3_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 209 3 ]
+        %tmp.78 = dup %tmp.65;
+        %tmp.79 = 3;
+        %tmp.80 = getv function %tmp.78 :equals;
+        %tmp.81 = invoke %tmp.78 %tmp.80 (%tmp.79);
+        bt %tmp.81 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_209_3_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 230 3 ]
+        %tmp.82 = dup %tmp.65;
+        %tmp.83 = 4;
+        %tmp.84 = getv function %tmp.82 :equals;
+        %tmp.85 = invoke %tmp.82 %tmp.84 (%tmp.83);
+        bt %tmp.85 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_230_3_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 251 3 ]
+        %tmp.86 = dup %tmp.65;
+        %tmp.87 = 5;
+        %tmp.88 = getv function %tmp.86 :equals;
+        %tmp.89 = invoke %tmp.86 %tmp.88 (%tmp.87);
+        bt %tmp.89 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_251_3_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 269 3 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_190_2_defaultCodeBegin;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_192_3_switchCase:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 193 4 ]
+        %tmp.90 = lgetv %clockTime.5;
+        %tmp.91 = getv %tmp.90 :hour;
+        lputv %timeHH.6 %tmp.91;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 194 4 ]
+        %tmp.92 = lgetv %clockTime.5;
+        %tmp.93 = getv %tmp.92 :min;
+        lputv %timeMM.7 %tmp.93;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 195 4 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_190_2_switchStmtEnd;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_197_3_switchCase:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 198 4 ]
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_198_4_if_stmt:
+        %tmp.95 = lgetv %isNotDest.9;
+        bf %tmp.95 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_198_4_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_198_4_if_true:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_198_19_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 199 5 ]
+        %tmp.97 = getv ? :remains;
+        %tmp.98 = 60;
+        %tmp.99 = div %tmp.97 %tmp.98;
+        lputv %timeHH.6 %tmp.99;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 200 5 ]
+        %tmp.101 = getv ? :remains;
+        %tmp.102 = 60;
+        %tmp.103 = mod %tmp.101 %tmp.102;
+        lputv %timeMM.7 %tmp.103;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_198_19_stop:
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_198_4_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_198_4_if_end:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 202 4 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_190_2_switchStmtEnd;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_204_3_switchCase:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 205 4 ]
+        %tmp.105 = lgetv %elTime.8;
+        %tmp.106 = 60;
+        %tmp.107 = div %tmp.105 %tmp.106;
+        lputv %timeHH.6 %tmp.107;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 206 4 ]
+        %tmp.109 = lgetv %elTime.8;
+        %tmp.110 = 60;
+        %tmp.111 = mod %tmp.109 %tmp.110;
+        lputv %timeMM.7 %tmp.111;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 207 4 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_190_2_switchStmtEnd;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_209_3_switchCase:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 210 4 ]
+        %tmp.113 = getv ? :tt;
+        push %tmp.113;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_210_4_switchStmtBegin:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 211 5 ]
+        %tmp.114 = dup %tmp.113;
+        %tmp.115 = 0;
+        %tmp.116 = getv function %tmp.114 :equals;
+        %tmp.117 = invoke %tmp.114 %tmp.116 (%tmp.115);
+        bt %tmp.117 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_211_5_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 212 5 ]
+        %tmp.118 = dup %tmp.113;
+        %tmp.119 = 1;
+        %tmp.120 = getv function %tmp.118 :equals;
+        %tmp.121 = invoke %tmp.118 %tmp.120 (%tmp.119);
+        bt %tmp.121 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_212_5_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 213 5 ]
+        %tmp.122 = dup %tmp.113;
+        %tmp.123 = 2;
+        %tmp.124 = getv function %tmp.122 :equals;
+        %tmp.125 = invoke %tmp.122 %tmp.124 (%tmp.123);
+        bt %tmp.125 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_213_5_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 217 5 ]
+        %tmp.126 = dup %tmp.113;
+        %tmp.127 = 3;
+        %tmp.128 = getv function %tmp.126 :equals;
+        %tmp.129 = invoke %tmp.126 %tmp.128 (%tmp.127);
+        bt %tmp.129 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_217_5_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 218 5 ]
+        %tmp.130 = dup %tmp.113;
+        %tmp.131 = 4;
+        %tmp.132 = getv function %tmp.130 :equals;
+        %tmp.133 = invoke %tmp.130 %tmp.132 (%tmp.131);
+        bt %tmp.133 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_218_5_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 219 5 ]
+        %tmp.134 = dup %tmp.113;
+        %tmp.135 = 5;
+        %tmp.136 = getv function %tmp.134 :equals;
+        %tmp.137 = invoke %tmp.134 %tmp.136 (%tmp.135);
+        bt %tmp.137 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_219_5_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 225 5 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_210_4_defaultCodeBegin;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_211_5_switchCase:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_212_5_switchCase:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_213_5_switchCase:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 214 6 ]
+        %tmp.139 = lgetv %elTime.8;
+        %tmp.140 = 60;
+        %tmp.141 = div %tmp.139 %tmp.140;
+        lputv %timeHH.6 %tmp.141;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 215 6 ]
+        %tmp.143 = lgetv %elTime.8;
+        %tmp.144 = 60;
+        %tmp.145 = mod %tmp.143 %tmp.144;
+        lputv %timeMM.7 %tmp.145;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 216 6 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_210_4_switchStmtEnd;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_217_5_switchCase:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_218_5_switchCase:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_219_5_switchCase:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 220 6 ]
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_220_6_if_stmt:
+        %tmp.147 = lgetv %isNotDest.9;
+        bf %tmp.147 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_220_6_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_220_6_if_true:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_220_21_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 221 7 ]
+        %tmp.149 = getv ? :remains;
+        %tmp.150 = 60;
+        %tmp.151 = div %tmp.149 %tmp.150;
+        lputv %timeHH.6 %tmp.151;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 222 7 ]
+        %tmp.153 = getv ? :remains;
+        %tmp.154 = 60;
+        %tmp.155 = mod %tmp.153 %tmp.154;
+        lputv %timeMM.7 %tmp.155;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_220_21_stop:
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_220_6_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_220_6_if_end:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 224 6 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_210_4_switchStmtEnd;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_225_5_switchCase:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_210_4_defaultCodeBegin:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 226 5 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_210_4_switchStmtEnd;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_210_4_switchStmtEnd:
+        pop;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 228 4 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_190_2_switchStmtEnd;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_230_3_switchCase:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 231 4 ]
+        %tmp.157 = getv ? :tt;
+        push %tmp.157;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_231_4_switchStmtBegin:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 232 5 ]
+        %tmp.158 = dup %tmp.157;
+        %tmp.159 = 0;
+        %tmp.160 = getv function %tmp.158 :equals;
+        %tmp.161 = invoke %tmp.158 %tmp.160 (%tmp.159);
+        bt %tmp.161 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_232_5_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 233 5 ]
+        %tmp.162 = dup %tmp.157;
+        %tmp.163 = 1;
+        %tmp.164 = getv function %tmp.162 :equals;
+        %tmp.165 = invoke %tmp.162 %tmp.164 (%tmp.163);
+        bt %tmp.165 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_233_5_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 234 5 ]
+        %tmp.166 = dup %tmp.157;
+        %tmp.167 = 2;
+        %tmp.168 = getv function %tmp.166 :equals;
+        %tmp.169 = invoke %tmp.166 %tmp.168 (%tmp.167);
+        bt %tmp.169 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_234_5_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 238 5 ]
+        %tmp.170 = dup %tmp.157;
+        %tmp.171 = 3;
+        %tmp.172 = getv function %tmp.170 :equals;
+        %tmp.173 = invoke %tmp.170 %tmp.172 (%tmp.171);
+        bt %tmp.173 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_238_5_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 239 5 ]
+        %tmp.174 = dup %tmp.157;
+        %tmp.175 = 4;
+        %tmp.176 = getv function %tmp.174 :equals;
+        %tmp.177 = invoke %tmp.174 %tmp.176 (%tmp.175);
+        bt %tmp.177 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_239_5_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 240 5 ]
+        %tmp.178 = dup %tmp.157;
+        %tmp.179 = 5;
+        %tmp.180 = getv function %tmp.178 :equals;
+        %tmp.181 = invoke %tmp.178 %tmp.180 (%tmp.179);
+        bt %tmp.181 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_240_5_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 246 5 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_231_4_defaultCodeBegin;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_232_5_switchCase:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_233_5_switchCase:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_234_5_switchCase:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 235 6 ]
+        %tmp.182 = lgetv %clockTime.5;
+        %tmp.183 = getv %tmp.182 :hour;
+        lputv %timeHH.6 %tmp.183;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 236 6 ]
+        %tmp.184 = lgetv %clockTime.5;
+        %tmp.185 = getv %tmp.184 :min;
+        lputv %timeMM.7 %tmp.185;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 237 6 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_231_4_switchStmtEnd;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_238_5_switchCase:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_239_5_switchCase:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_240_5_switchCase:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 241 6 ]
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_241_6_if_stmt:
+        %tmp.187 = lgetv %isNotDest.9;
+        bf %tmp.187 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_241_6_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_241_6_if_true:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_241_21_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 242 7 ]
+        %tmp.189 = getv ? :remains;
+        %tmp.190 = 60;
+        %tmp.191 = div %tmp.189 %tmp.190;
+        lputv %timeHH.6 %tmp.191;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 243 7 ]
+        %tmp.193 = getv ? :remains;
+        %tmp.194 = 60;
+        %tmp.195 = mod %tmp.193 %tmp.194;
+        lputv %timeMM.7 %tmp.195;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_241_21_stop:
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_241_6_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_241_6_if_end:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 245 6 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_231_4_switchStmtEnd;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_246_5_switchCase:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_231_4_defaultCodeBegin:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 247 5 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_231_4_switchStmtEnd;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_231_4_switchStmtEnd:
+        pop;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 249 4 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_190_2_switchStmtEnd;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_251_3_switchCase:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 252 4 ]
+        %tmp.197 = getv ? :tt;
+        push %tmp.197;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_252_4_switchStmtBegin:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 253 5 ]
+        %tmp.198 = dup %tmp.197;
+        %tmp.199 = 0;
+        %tmp.200 = getv function %tmp.198 :equals;
+        %tmp.201 = invoke %tmp.198 %tmp.200 (%tmp.199);
+        bt %tmp.201 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_253_5_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 254 5 ]
+        %tmp.202 = dup %tmp.197;
+        %tmp.203 = 1;
+        %tmp.204 = getv function %tmp.202 :equals;
+        %tmp.205 = invoke %tmp.202 %tmp.204 (%tmp.203);
+        bt %tmp.205 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_254_5_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 255 5 ]
+        %tmp.206 = dup %tmp.197;
+        %tmp.207 = 2;
+        %tmp.208 = getv function %tmp.206 :equals;
+        %tmp.209 = invoke %tmp.206 %tmp.208 (%tmp.207);
+        bt %tmp.209 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_255_5_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 259 5 ]
+        %tmp.210 = dup %tmp.197;
+        %tmp.211 = 3;
+        %tmp.212 = getv function %tmp.210 :equals;
+        %tmp.213 = invoke %tmp.210 %tmp.212 (%tmp.211);
+        bt %tmp.213 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_259_5_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 260 5 ]
+        %tmp.214 = dup %tmp.197;
+        %tmp.215 = 4;
+        %tmp.216 = getv function %tmp.214 :equals;
+        %tmp.217 = invoke %tmp.214 %tmp.216 (%tmp.215);
+        bt %tmp.217 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_260_5_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 261 5 ]
+        %tmp.218 = dup %tmp.197;
+        %tmp.219 = 5;
+        %tmp.220 = getv function %tmp.218 :equals;
+        %tmp.221 = invoke %tmp.218 %tmp.220 (%tmp.219);
+        bt %tmp.221 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_261_5_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 265 5 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_252_4_defaultCodeBegin;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_253_5_switchCase:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_254_5_switchCase:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_255_5_switchCase:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 256 6 ]
+        %tmp.222 = lgetv %clockTime.5;
+        %tmp.223 = getv %tmp.222 :hour;
+        lputv %timeHH.6 %tmp.223;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 257 6 ]
+        %tmp.224 = lgetv %clockTime.5;
+        %tmp.225 = getv %tmp.224 :min;
+        lputv %timeMM.7 %tmp.225;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 258 6 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_252_4_switchStmtEnd;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_259_5_switchCase:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_260_5_switchCase:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_261_5_switchCase:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 262 6 ]
+        %tmp.227 = lgetv %elTime.8;
+        %tmp.228 = 60;
+        %tmp.229 = div %tmp.227 %tmp.228;
+        lputv %timeHH.6 %tmp.229;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 263 6 ]
+        %tmp.231 = lgetv %elTime.8;
+        %tmp.232 = 60;
+        %tmp.233 = mod %tmp.231 %tmp.232;
+        lputv %timeMM.7 %tmp.233;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 264 6 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_252_4_switchStmtEnd;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_265_5_switchCase:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_252_4_defaultCodeBegin:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 266 5 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_252_4_switchStmtEnd;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_252_4_switchStmtEnd:
+        pop;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 268 4 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_190_2_switchStmtEnd;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_269_3_switchCase:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_190_2_defaultCodeBegin:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_190_2_switchStmtEnd:
+        pop;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 272 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_stop" ]
+        %unitK.10 = local;
+        %tmp.234 = "";
+        lputv %unitK.10 %tmp.234;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 273 2 ]
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_273_2_if_stmt:
+        %tmp.236 = getv ? :gtDis;
+        %tmp.237 = 1000;
+        %tmp.238 = div %tmp.236 %tmp.237;
+        %tmp.239 = 1000;
+        %tmp.240 = lt %tmp.238 %tmp.239;
+        bf %tmp.240 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_273_2_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_273_2_if_true:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_273_25_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 273 27 ]
+        %tmp.241 = "k";
+        lputv %unitK.10 %tmp.241;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_273_25_stop:
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_273_2_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_273_2_if_end:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 275 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_stop" ]
+        %HH_len.11 = local;
+        %tmp.242 = 0;
+        lputv %HH_len.11 %tmp.242;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 276 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_stop" ]
+        %MM_len.12 = local;
+        %tmp.243 = 0;
+        lputv %MM_len.12 %tmp.243;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 277 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_stop" ]
+        %timeText.13 = local;
+        %tmp.244 = "";
+        lputv %timeText.13 %tmp.244;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 278 2 ]
+        %tmp.246 = getv ? :edgeModel;
+        push %tmp.246;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_278_2_switchStmtBegin:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 279 2 ]
+        %tmp.247 = dup %tmp.246;
+        %tmp.248 = 1040;
+        %tmp.249 = getv function %tmp.247 :equals;
+        %tmp.250 = invoke %tmp.247 %tmp.249 (%tmp.248);
+        bt %tmp.250 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_279_2_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 301 2 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_278_2_defaultCodeBegin;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_279_2_switchCase:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 280 3 ]
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_280_3_if_stmt:
+        %tmp.252 = lgetv %isNotDest.9;
+        bf %tmp.252 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_280_3_if_false;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_280_3_if_true:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_280_18_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 281 4 ]
+        %tmp.253 = lgetv %dc;
+        %tmp.254 = getv function %tmp.253 :getTextWidthInPixels;
+        %tmp.255 = lgetv %timeHH.6;
+        %tmp.256 = getv function %tmp.255 :format;
+        %tmp.257 = "%d";
+        %tmp.258 = invoke %tmp.255 %tmp.256(%tmp.257);
+        %tmp.259 = getm $.Toybox.Graphics;
+        %tmp.260 = getv %tmp.259 :FONT_NUMBER_HOT;
+        %tmp.261 = invoke %tmp.253 %tmp.254(%tmp.258, %tmp.260);
+        lputv %HH_len.11 %tmp.261;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 282 4 ]
+        %tmp.262 = lgetv %dc;
+        %tmp.263 = getv function %tmp.262 :getTextWidthInPixels;
+        %tmp.264 = ":";
+        %tmp.265 = lgetv %timeMM.7;
+        %tmp.266 = getv function %tmp.265 :format;
+        %tmp.267 = "%02d";
+        %tmp.268 = invoke %tmp.265 %tmp.266(%tmp.267);
+        %tmp.269 = add %tmp.264 %tmp.268;
+        %tmp.270 = getm $.Toybox.Graphics;
+        %tmp.271 = getv %tmp.270 :FONT_NUMBER_MEDIUM;
+        %tmp.272 = invoke %tmp.262 %tmp.263(%tmp.269, %tmp.271);
+        lputv %MM_len.12 %tmp.272;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 283 4 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_280_18_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_280_18_stop" ]
+        %time_len.14 = local;
+        %tmp.274 = lgetv %HH_len.11;
+        %tmp.276 = lgetv %MM_len.12;
+        %tmp.277 = add %tmp.274 %tmp.276;
+        %tmp.278 = 0.5;
+        %tmp.279 = mul %tmp.277 %tmp.278;
+        lputv %time_len.14 %tmp.279;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 284 4 ]
+        %tmp.280 = lgetv %dc;
+        %tmp.281 = getv function %tmp.280 :drawText;
+        %tmp.283 = lgetv %center.3;
+        %tmp.285 = lgetv %time_len.14;
+        %tmp.286 = sub %tmp.283 %tmp.285;
+        %tmp.288 = lgetv %vcenter.4;
+        %tmp.289 = getm $.Toybox.Graphics;
+        %tmp.290 = getv %tmp.289 :FONT_NUMBER_HOT;
+        %tmp.291 = lgetv %timeHH.6;
+        %tmp.292 = getv function %tmp.291 :format;
+        %tmp.293 = "%d";
+        %tmp.294 = invoke %tmp.291 %tmp.292(%tmp.293);
+        %tmp.295 = getm $.Toybox.Graphics;
+        %tmp.296 = getv %tmp.295 :TEXT_JUSTIFY_LEFT;
+        %tmp.297 = getm $.Toybox.Graphics;
+        %tmp.298 = getv %tmp.297 :TEXT_JUSTIFY_VCENTER;
+        %tmp.299 = bitor %tmp.296 %tmp.298;
+        invoke %tmp.280 %tmp.281(%tmp.286, %tmp.288, %tmp.290, %tmp.294, %tmp.299);
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 285 4 ]
+        %tmp.300 = lgetv %dc;
+        %tmp.301 = getv function %tmp.300 :drawText;
+        %tmp.303 = lgetv %center.3;
+        %tmp.305 = lgetv %time_len.14;
+        %tmp.306 = sub %tmp.303 %tmp.305;
+        %tmp.308 = lgetv %HH_len.11;
+        %tmp.309 = add %tmp.306 %tmp.308;
+        %tmp.311 = lgetv %vcenter.4;
+        %tmp.313 = getv ? :dfHeight;
+        %tmp.314 = 0.05;
+        %tmp.315 = mul %tmp.313 %tmp.314;
+        %tmp.316 = add %tmp.311 %tmp.315;
+        %tmp.317 = getm $.Toybox.Graphics;
+        %tmp.318 = getv %tmp.317 :FONT_NUMBER_MEDIUM;
+        %tmp.319 = ":";
+        %tmp.320 = lgetv %timeMM.7;
+        %tmp.321 = getv function %tmp.320 :format;
+        %tmp.322 = "%02d";
+        %tmp.323 = invoke %tmp.320 %tmp.321(%tmp.322);
+        %tmp.324 = add %tmp.319 %tmp.323;
+        %tmp.325 = getm $.Toybox.Graphics;
+        %tmp.326 = getv %tmp.325 :TEXT_JUSTIFY_LEFT;
+        %tmp.327 = getm $.Toybox.Graphics;
+        %tmp.328 = getv %tmp.327 :TEXT_JUSTIFY_VCENTER;
+        %tmp.329 = bitor %tmp.326 %tmp.328;
+        invoke %tmp.300 %tmp.301(%tmp.309, %tmp.316, %tmp.318, %tmp.324, %tmp.329);
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_280_18_stop:
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_280_3_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_280_3_if_false:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_286_10_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 287 4 ]
+        %tmp.330 = self;
+        %tmp.331 = getv function %tmp.330 :loadResource;
+        %tmp.333 = getv ? :Rez;
+        %tmp.334 = getv %tmp.333 :Strings;
+        %tmp.335 = getv %tmp.334 :nearDest;
+        %tmp.336 = invoke %tmp.330 %tmp.331(%tmp.335);
+        lputv %timeText.13 %tmp.336;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 288 4 ]
+        %tmp.337 = lgetv %dc;
+        %tmp.338 = getv function %tmp.337 :drawText;
+        %tmp.340 = lgetv %center.3;
+        %tmp.342 = lgetv %vcenter.4;
+        %tmp.343 = getm $.Toybox.Graphics;
+        %tmp.344 = getv %tmp.343 :FONT_MEDIUM;
+        %tmp.346 = lgetv %timeText.13;
+        %tmp.347 = getm $.Toybox.Graphics;
+        %tmp.348 = getv %tmp.347 :TEXT_JUSTIFY_CENTER;
+        %tmp.349 = getm $.Toybox.Graphics;
+        %tmp.350 = getv %tmp.349 :TEXT_JUSTIFY_VCENTER;
+        %tmp.351 = bitor %tmp.348 %tmp.350;
+        invoke %tmp.337 %tmp.338(%tmp.340, %tmp.342, %tmp.344, %tmp.346, %tmp.351);
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_286_10_stop:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_280_3_if_end:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 291 3 ]
+        %tmp.352 = lgetv %dc;
+        %tmp.353 = getv function %tmp.352 :drawText;
+        %tmp.355 = getv ? :dfWidth;
+        %tmp.356 = 0.03;
+        %tmp.357 = mul %tmp.355 %tmp.356;
+        %tmp.359 = getv ? :dfHeight;
+        %tmp.360 = 0.22;
+        %tmp.361 = mul %tmp.359 %tmp.360;
+        %tmp.362 = getm $.Toybox.Graphics;
+        %tmp.363 = getv %tmp.362 :FONT_LARGE;
+        %tmp.365 = getv ? :gtDis;
+        %tmp.366 = 1000;
+        %tmp.367 = div %tmp.365 %tmp.366;
+        %tmp.368 = getv function %tmp.367 :format;
+        %tmp.369 = "%d";
+        %tmp.370 = invoke %tmp.367 %tmp.368(%tmp.369);
+        %tmp.372 = lgetv %unitK.10;
+        %tmp.373 = add %tmp.370 %tmp.372;
+        %tmp.374 = getm $.Toybox.Graphics;
+        %tmp.375 = getv %tmp.374 :TEXT_JUSTIFY_LEFT;
+        %tmp.376 = getm $.Toybox.Graphics;
+        %tmp.377 = getv %tmp.376 :TEXT_JUSTIFY_VCENTER;
+        %tmp.378 = bitor %tmp.375 %tmp.377;
+        invoke %tmp.352 %tmp.353(%tmp.357, %tmp.361, %tmp.363, %tmp.373, %tmp.378);
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 293 3 ]
+        %tmp.380 = getv ? :dispTR;
+        push %tmp.380;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_293_3_switchStmtBegin:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 294 3 ]
+        %tmp.381 = dup %tmp.380;
+        %tmp.382 = 0;
+        %tmp.383 = getv function %tmp.381 :equals;
+        %tmp.384 = invoke %tmp.381 %tmp.383 (%tmp.382);
+        bt %tmp.384 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_294_3_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 297 3 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_293_3_defaultCodeBegin;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_294_3_switchCase:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 295 4 ]
+        %tmp.385 = self;
+        %tmp.386 = getv function %tmp.385 :drawBatteryText;
+        %tmp.388 = lgetv %dc;
+        %tmp.389 = 0.97;
+        %tmp.390 = 0.22;
+        invoke %tmp.385 %tmp.386(%tmp.388, %tmp.389, %tmp.390);
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 296 4 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_293_3_switchStmtEnd;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_297_3_switchCase:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_293_3_defaultCodeBegin:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 298 4 ]
+        %tmp.391 = self;
+        %tmp.392 = getv function %tmp.391 :drawLimitSpeedText;
+        %tmp.394 = lgetv %dc;
+        %tmp.395 = 0.97;
+        %tmp.396 = 0.22;
+        invoke %tmp.391 %tmp.392(%tmp.394, %tmp.395, %tmp.396);
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_293_3_switchStmtEnd:
+        pop;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 300 3 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_278_2_switchStmtEnd;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_301_2_switchCase:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_278_2_defaultCodeBegin:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 302 3 ]
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_302_3_if_stmt:
+        %tmp.398 = lgetv %isNotDest.9;
+        bf %tmp.398 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_302_3_if_false;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_302_3_if_true:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_302_18_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 303 4 ]
+        %tmp.399 = getm $.Toybox.Lang;
+        %tmp.400 = getv function %tmp.399 :format;
+        %tmp.401 = "$1$:$2$";
+        %tmp.402 = newa 2;
+        %tmp.404 = lgetv %timeHH.6;
+        %tmp.405 = dup %tmp.402;
+        %tmp.406 = aputv %tmp.405 0 %tmp.404;
+        %tmp.407 = lgetv %timeMM.7;
+        %tmp.408 = getv function %tmp.407 :format;
+        %tmp.409 = "%02d";
+        %tmp.410 = invoke %tmp.407 %tmp.408(%tmp.409);
+        %tmp.411 = dup %tmp.406;
+        %tmp.412 = aputv %tmp.411 1 %tmp.410;
+        %tmp.413 = invoke %tmp.399 %tmp.400(%tmp.401, %tmp.412);
+        lputv %timeText.13 %tmp.413;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 304 4 ]
+        %tmp.414 = lgetv %dc;
+        %tmp.415 = getv function %tmp.414 :drawText;
+        %tmp.417 = lgetv %center.3;
+        %tmp.419 = lgetv %vcenter.4;
+        %tmp.420 = getm $.Toybox.Graphics;
+        %tmp.421 = getv %tmp.420 :FONT_NUMBER_MEDIUM;
+        %tmp.423 = lgetv %timeText.13;
+        %tmp.424 = getm $.Toybox.Graphics;
+        %tmp.425 = getv %tmp.424 :TEXT_JUSTIFY_CENTER;
+        %tmp.426 = getm $.Toybox.Graphics;
+        %tmp.427 = getv %tmp.426 :TEXT_JUSTIFY_VCENTER;
+        %tmp.428 = bitor %tmp.425 %tmp.427;
+        invoke %tmp.414 %tmp.415(%tmp.417, %tmp.419, %tmp.421, %tmp.423, %tmp.428);
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_302_18_stop:
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_302_3_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_302_3_if_false:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_305_10_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 306 4 ]
+        %tmp.429 = self;
+        %tmp.430 = getv function %tmp.429 :loadResource;
+        %tmp.432 = getv ? :Rez;
+        %tmp.433 = getv %tmp.432 :Strings;
+        %tmp.434 = getv %tmp.433 :nearDest;
+        %tmp.435 = invoke %tmp.429 %tmp.430(%tmp.434);
+        lputv %timeText.13 %tmp.435;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 307 4 ]
+        %tmp.436 = lgetv %dc;
+        %tmp.437 = getv function %tmp.436 :drawText;
+        %tmp.439 = lgetv %center.3;
+        %tmp.441 = lgetv %vcenter.4;
+        %tmp.442 = getm $.Toybox.Graphics;
+        %tmp.443 = getv %tmp.442 :FONT_MEDIUM;
+        %tmp.445 = lgetv %timeText.13;
+        %tmp.446 = getm $.Toybox.Graphics;
+        %tmp.447 = getv %tmp.446 :TEXT_JUSTIFY_CENTER;
+        %tmp.448 = getm $.Toybox.Graphics;
+        %tmp.449 = getv %tmp.448 :TEXT_JUSTIFY_VCENTER;
+        %tmp.450 = bitor %tmp.447 %tmp.449;
+        invoke %tmp.436 %tmp.437(%tmp.439, %tmp.441, %tmp.443, %tmp.445, %tmp.450);
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_305_10_stop:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_302_3_if_end:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 309 3 ]
+        %tmp.451 = lgetv %dc;
+        %tmp.452 = getv function %tmp.451 :drawText;
+        %tmp.454 = getv ? :dfWidth;
+        %tmp.455 = 0.03;
+        %tmp.456 = mul %tmp.454 %tmp.455;
+        %tmp.458 = getv ? :dfHeight;
+        %tmp.459 = 0.22;
+        %tmp.460 = mul %tmp.458 %tmp.459;
+        %tmp.461 = getm $.Toybox.Graphics;
+        %tmp.462 = getv %tmp.461 :FONT_MEDIUM;
+        %tmp.464 = getv ? :gtDis;
+        %tmp.465 = 1000;
+        %tmp.466 = div %tmp.464 %tmp.465;
+        %tmp.467 = getv function %tmp.466 :format;
+        %tmp.468 = "%d";
+        %tmp.469 = invoke %tmp.466 %tmp.467(%tmp.468);
+        %tmp.471 = lgetv %unitK.10;
+        %tmp.472 = add %tmp.469 %tmp.471;
+        %tmp.473 = getm $.Toybox.Graphics;
+        %tmp.474 = getv %tmp.473 :TEXT_JUSTIFY_LEFT;
+        %tmp.475 = getm $.Toybox.Graphics;
+        %tmp.476 = getv %tmp.475 :TEXT_JUSTIFY_VCENTER;
+        %tmp.477 = bitor %tmp.474 %tmp.476;
+        invoke %tmp.451 %tmp.452(%tmp.456, %tmp.460, %tmp.462, %tmp.472, %tmp.477);
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 310 3 ]
+        %tmp.479 = getv ? :dispTR;
+        push %tmp.479;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_310_3_switchStmtBegin:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 311 3 ]
+        %tmp.480 = dup %tmp.479;
+        %tmp.481 = 0;
+        %tmp.482 = getv function %tmp.480 :equals;
+        %tmp.483 = invoke %tmp.480 %tmp.482 (%tmp.481);
+        bt %tmp.483 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_311_3_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 314 3 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_310_3_defaultCodeBegin;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_311_3_switchCase:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 312 4 ]
+        %tmp.484 = self;
+        %tmp.485 = getv function %tmp.484 :drawBatteryText;
+        %tmp.487 = lgetv %dc;
+        %tmp.488 = 0.97;
+        %tmp.489 = 0.22;
+        invoke %tmp.484 %tmp.485(%tmp.487, %tmp.488, %tmp.489);
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 313 4 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_310_3_switchStmtEnd;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_314_3_switchCase:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_310_3_defaultCodeBegin:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 315 4 ]
+        %tmp.490 = self;
+        %tmp.491 = getv function %tmp.490 :drawLimitSpeedText;
+        %tmp.493 = lgetv %dc;
+        %tmp.494 = 0.97;
+        %tmp.495 = 0.22;
+        invoke %tmp.490 %tmp.491(%tmp.493, %tmp.494, %tmp.495);
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_310_3_switchStmtEnd:
+        pop;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_278_2_switchStmtEnd:
+        pop;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_153_40_stop:
+    }
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 344; ]
+    function drawLimitSpeedText(dc as Dc, x as Numeric, y as Numeric) as Void {
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_344_78_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 352 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_344_78_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_344_78_stop" ]
+        %targetSpeedText.1 = local;
+        %tmp.2 = getv ? :tgSpd;
+        %tmp.3 = getv function %tmp.2 :format;
+        %tmp.4 = "%.1f";
+        %tmp.5 = invoke %tmp.2 %tmp.3(%tmp.4);
+        lputv %targetSpeedText.1 %tmp.5;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 353 2 ]
+        %tmp.6 = lgetv %dc;
+        %tmp.7 = getv function %tmp.6 :drawText;
+        %tmp.9 = getv ? :dfWidth;
+        %tmp.11 = lgetv %x;
+        %tmp.12 = mul %tmp.9 %tmp.11;
+        %tmp.14 = getv ? :dfHeight;
+        %tmp.16 = lgetv %y;
+        %tmp.17 = mul %tmp.14 %tmp.16;
+        %tmp.18 = getm $.Toybox.Graphics;
+        %tmp.19 = getv %tmp.18 :FONT_MEDIUM;
+        %tmp.21 = lgetv %targetSpeedText.1;
+        %tmp.22 = getm $.Toybox.Graphics;
+        %tmp.23 = getv %tmp.22 :TEXT_JUSTIFY_RIGHT;
+        %tmp.24 = getm $.Toybox.Graphics;
+        %tmp.25 = getv %tmp.24 :TEXT_JUSTIFY_VCENTER;
+        %tmp.26 = bitor %tmp.23 %tmp.25;
+        invoke %tmp.6 %tmp.7(%tmp.12, %tmp.17, %tmp.19, %tmp.21, %tmp.26);
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_344_78_stop:
+    }
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 356; ]
+    function drawBatteryText(dc as Dc, x as Numeric, y as Numeric) as Void {
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_356_72_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 366 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_356_72_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_356_72_stop" ]
+        %unit.1 = local;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 367 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_356_72_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_356_72_stop" ]
+        %battery.2 = local;
+        %tmp.1 = getm $.Toybox.System;
+        %tmp.2 = getv function %tmp.1 :getSystemStats;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        %tmp.4 = getv %tmp.3 :battery;
+        lputv %battery.2 %tmp.4;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 368 2 ]
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_368_2_if_stmt:
+        %tmp.6 = lgetv %battery.2;
+        %tmp.7 = 100;
+        %tmp.8 = ne %tmp.6 %tmp.7;
+        bf %tmp.8 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_368_2_if_false;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_368_2_if_true:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_368_22_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 369 3 ]
+        %tmp.9 = "%";
+        lputv %unit.1 %tmp.9;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_368_22_stop:
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_368_2_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_368_2_if_false:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_370_9_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 371 3 ]
+        %tmp.10 = "";
+        lputv %unit.1 %tmp.10;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_370_9_stop:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_368_2_if_end:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 373 2 ]
+        %tmp.12 = getv ? :edgeModel;
+        push %tmp.12;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_373_2_switchStmtBegin:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 374 2 ]
+        %tmp.13 = dup %tmp.12;
+        %tmp.14 = 1040;
+        %tmp.15 = getv function %tmp.13 :equals;
+        %tmp.16 = invoke %tmp.13 %tmp.15 (%tmp.14);
+        bt %tmp.16 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_374_2_switchCase;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 377 2 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_373_2_defaultCodeBegin;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_374_2_switchCase:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 375 3 ]
+        %tmp.17 = lgetv %dc;
+        %tmp.18 = getv function %tmp.17 :drawText;
+        %tmp.20 = getv ? :dfWidth;
+        %tmp.22 = lgetv %x;
+        %tmp.23 = mul %tmp.20 %tmp.22;
+        %tmp.25 = getv ? :dfHeight;
+        %tmp.27 = lgetv %y;
+        %tmp.28 = mul %tmp.25 %tmp.27;
+        %tmp.29 = getm $.Toybox.Graphics;
+        %tmp.30 = getv %tmp.29 :FONT_MEDIUM;
+        %tmp.31 = lgetv %battery.2;
+        %tmp.32 = getv function %tmp.31 :format;
+        %tmp.33 = "%d";
+        %tmp.34 = invoke %tmp.31 %tmp.32(%tmp.33);
+        %tmp.36 = lgetv %unit.1;
+        %tmp.37 = add %tmp.34 %tmp.36;
+        %tmp.38 = getm $.Toybox.Graphics;
+        %tmp.39 = getv %tmp.38 :TEXT_JUSTIFY_RIGHT;
+        %tmp.40 = getm $.Toybox.Graphics;
+        %tmp.41 = getv %tmp.40 :TEXT_JUSTIFY_VCENTER;
+        %tmp.42 = bitor %tmp.39 %tmp.41;
+        invoke %tmp.17 %tmp.18(%tmp.23, %tmp.28, %tmp.30, %tmp.37, %tmp.42);
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 376 3 ]
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_373_2_switchStmtEnd;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_377_2_switchCase:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_373_2_defaultCodeBegin:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 378 3 ]
+        %tmp.43 = lgetv %dc;
+        %tmp.44 = getv function %tmp.43 :drawText;
+        %tmp.46 = getv ? :dfWidth;
+        %tmp.48 = lgetv %x;
+        %tmp.49 = mul %tmp.46 %tmp.48;
+        %tmp.51 = getv ? :dfHeight;
+        %tmp.53 = lgetv %y;
+        %tmp.54 = mul %tmp.51 %tmp.53;
+        %tmp.55 = getm $.Toybox.Graphics;
+        %tmp.56 = getv %tmp.55 :FONT_MEDIUM;
+        %tmp.57 = lgetv %battery.2;
+        %tmp.58 = getv function %tmp.57 :format;
+        %tmp.59 = "%d";
+        %tmp.60 = invoke %tmp.57 %tmp.58(%tmp.59);
+        %tmp.62 = lgetv %unit.1;
+        %tmp.63 = add %tmp.60 %tmp.62;
+        %tmp.64 = getm $.Toybox.Graphics;
+        %tmp.65 = getv %tmp.64 :TEXT_JUSTIFY_RIGHT;
+        %tmp.66 = getm $.Toybox.Graphics;
+        %tmp.67 = getv %tmp.66 :TEXT_JUSTIFY_VCENTER;
+        %tmp.68 = bitor %tmp.65 %tmp.67;
+        invoke %tmp.43 %tmp.44(%tmp.49, %tmp.54, %tmp.56, %tmp.63, %tmp.68);
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_373_2_switchStmtEnd:
+        pop;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_356_72_stop:
+    }
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 383; ]
+    function drawBattery(dc as Dc) as Void {
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 384 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_stop" ]
+        %backgroundColor.1 = local;
+        %tmp.1 = self;
+        %tmp.2 = getv function %tmp.1 :getBackgroundColor;
+        %tmp.3 = invoke %tmp.1 %tmp.2();
+        lputv %backgroundColor.1 %tmp.3;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 386 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_stop" ]
+        %greenColor.2 = local;
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_stop" ]
+        %redColor.3 = local;
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_stop" ]
+        %yellowColor.4 = local;
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_stop" ]
+        %grayColor.5 = local;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 388 2 ]
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_388_2_if_stmt:
+        %tmp.5 = lgetv %backgroundColor.1;
+        %tmp.6 = getm $.Toybox.Graphics;
+        %tmp.7 = getv %tmp.6 :COLOR_BLACK;
+        %tmp.8 = eq %tmp.5 %tmp.7;
+        bf %tmp.8 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_388_2_if_false;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_388_2_if_true:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_388_47_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 389 3 ]
+        %tmp.9 = getm $.Toybox.Graphics;
+        %tmp.10 = getv %tmp.9 :COLOR_GREEN;
+        lputv %greenColor.2 %tmp.10;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 390 3 ]
+        %tmp.11 = getm $.Toybox.Graphics;
+        %tmp.12 = getv %tmp.11 :COLOR_RED;
+        lputv %redColor.3 %tmp.12;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 391 3 ]
+        %tmp.13 = getm $.Toybox.Graphics;
+        %tmp.14 = getv %tmp.13 :COLOR_YELLOW;
+        lputv %yellowColor.4 %tmp.14;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 392 3 ]
+        %tmp.15 = getm $.Toybox.Graphics;
+        %tmp.16 = getv %tmp.15 :COLOR_DK_GRAY;
+        lputv %grayColor.5 %tmp.16;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_388_47_stop:
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_388_2_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_388_2_if_false:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_394_9_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 395 3 ]
+        %tmp.17 = getm $.Toybox.Graphics;
+        %tmp.18 = getv %tmp.17 :COLOR_DK_GREEN;
+        lputv %greenColor.2 %tmp.18;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 396 3 ]
+        %tmp.19 = getm $.Toybox.Graphics;
+        %tmp.20 = getv %tmp.19 :COLOR_DK_RED;
+        lputv %redColor.3 %tmp.20;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 397 3 ]
+        %tmp.21 = getm $.Toybox.Graphics;
+        %tmp.22 = getv %tmp.21 :COLOR_ORANGE;
+        lputv %yellowColor.4 %tmp.22;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 398 3 ]
+        %tmp.23 = getm $.Toybox.Graphics;
+        %tmp.24 = getv %tmp.23 :COLOR_LT_GRAY;
+        lputv %grayColor.5 %tmp.24;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_394_9_stop:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_388_2_if_end:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 401 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_stop" ]
+        %battery.6 = local;
+        %tmp.25 = getm $.Toybox.System;
+        %tmp.26 = getv function %tmp.25 :getSystemStats;
+        %tmp.27 = invoke %tmp.25 %tmp.26();
+        %tmp.28 = getv %tmp.27 :battery;
+        lputv %battery.6 %tmp.28;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 403 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_stop" ]
+        %x.7 = local;
+        %tmp.30 = getv ? :dfWidth;
+        %tmp.31 = 0.88;
+        %tmp.32 = mul %tmp.30 %tmp.31;
+        lputv %x.7 %tmp.32;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 404 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_stop" ]
+        %y.8 = local;
+        %tmp.34 = getv ? :dfHeight;
+        %tmp.35 = 0.15;
+        %tmp.36 = mul %tmp.34 %tmp.35;
+        lputv %y.8 %tmp.36;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 405 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_stop" ]
+        %width.9 = local;
+        %tmp.38 = getv ? :dfWidth;
+        %tmp.39 = 0.1;
+        %tmp.40 = mul %tmp.38 %tmp.39;
+        lputv %width.9 %tmp.40;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 406 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_stop" ]
+        %height.10 = local;
+        %tmp.42 = getv ? :dfHeight;
+        %tmp.43 = 0.19;
+        %tmp.44 = mul %tmp.42 %tmp.43;
+        lputv %height.10 %tmp.44;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 407 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_stop" ]
+        %cap.11 = local;
+        %tmp.46 = lgetv %width.9;
+        %tmp.47 = 0.15;
+        %tmp.48 = mul %tmp.46 %tmp.47;
+        lputv %cap.11 %tmp.48;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 408 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_stop" ]
+        %x2.12 = local;
+        %tmp.50 = lgetv %x.7;
+        %tmp.52 = lgetv %cap.11;
+        %tmp.53 = add %tmp.50 %tmp.52;
+        lputv %x2.12 %tmp.53;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 409 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_stop" ]
+        %y2.13 = local;
+        %tmp.55 = lgetv %y.8;
+        %tmp.57 = lgetv %cap.11;
+        %tmp.58 = 1.5;
+        %tmp.59 = mul %tmp.57 %tmp.58;
+        %tmp.60 = sub %tmp.55 %tmp.59;
+        lputv %y2.13 %tmp.60;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 410 2 ]
+        [ "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_start" "C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_stop" ]
+        %width2.14 = local;
+        %tmp.62 = lgetv %width.9;
+        %tmp.64 = lgetv %cap.11;
+        %tmp.65 = 2;
+        %tmp.66 = mul %tmp.64 %tmp.65;
+        %tmp.67 = sub %tmp.62 %tmp.66;
+        lputv %width2.14 %tmp.67;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 412 2 ]
+        %tmp.68 = lgetv %dc;
+        %tmp.69 = getv function %tmp.68 :setColor;
+        %tmp.71 = lgetv %grayColor.5;
+        %tmp.72 = -1;
+        invoke %tmp.68 %tmp.69(%tmp.71, %tmp.72);
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 413 5 ]
+        %tmp.73 = lgetv %dc;
+        %tmp.74 = getv function %tmp.73 :drawRectangle;
+        %tmp.76 = lgetv %x.7;
+        %tmp.78 = lgetv %y.8;
+        %tmp.80 = lgetv %width.9;
+        %tmp.82 = lgetv %height.10;
+        invoke %tmp.73 %tmp.74(%tmp.76, %tmp.78, %tmp.80, %tmp.82);
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 414 5 ]
+        %tmp.83 = lgetv %dc;
+        %tmp.84 = getv function %tmp.83 :drawRectangle;
+        %tmp.86 = lgetv %x2.12;
+        %tmp.88 = lgetv %y2.13;
+        %tmp.90 = lgetv %width2.14;
+        %tmp.92 = lgetv %cap.11;
+        %tmp.93 = 1.5;
+        %tmp.94 = mul %tmp.92 %tmp.93;
+        %tmp.95 = 1;
+        %tmp.96 = add %tmp.94 %tmp.95;
+        invoke %tmp.83 %tmp.84(%tmp.86, %tmp.88, %tmp.90, %tmp.96);
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 416 2 ]
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_416_2_if_stmt:
+        %tmp.98 = lgetv %battery.6;
+        %tmp.99 = 15;
+        %tmp.100 = lt %tmp.98 %tmp.99;
+        bf %tmp.100 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_416_2_if_false;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_416_2_if_true:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_416_20_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 417 3 ]
+        %tmp.101 = lgetv %dc;
+        %tmp.102 = getv function %tmp.101 :setColor;
+        %tmp.104 = lgetv %redColor.3;
+        %tmp.105 = -1;
+        invoke %tmp.101 %tmp.102(%tmp.104, %tmp.105);
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_416_20_stop:
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_416_2_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_416_2_if_false:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 418 9 ]
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_418_9_if_stmt:
+        %tmp.107 = lgetv %battery.6;
+        %tmp.108 = 30;
+        %tmp.109 = lt %tmp.107 %tmp.108;
+        bf %tmp.109 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_418_9_if_false;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_418_9_if_true:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_418_26_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 419 3 ]
+        %tmp.110 = lgetv %dc;
+        %tmp.111 = getv function %tmp.110 :setColor;
+        %tmp.113 = lgetv %yellowColor.4;
+        %tmp.114 = -1;
+        invoke %tmp.110 %tmp.111(%tmp.113, %tmp.114);
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_418_26_stop:
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_418_9_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_418_9_if_false:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 420 9 ]
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_420_9_if_stmt:
+        %tmp.116 = lgetv %battery.6;
+        %tmp.117 = 100;
+        %tmp.118 = eq %tmp.116 %tmp.117;
+        bf %tmp.118 @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_420_9_if_false;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_420_9_if_true:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_420_28_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 421 3 ]
+        %tmp.119 = lgetv %dc;
+        %tmp.120 = getv function %tmp.119 :setColor;
+        %tmp.122 = lgetv %greenColor.2;
+        %tmp.123 = -1;
+        invoke %tmp.119 %tmp.120(%tmp.122, %tmp.123);
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 423 3 ]
+        %tmp.124 = lgetv %dc;
+        %tmp.125 = getv function %tmp.124 :fillRectangle;
+        %tmp.127 = lgetv %x2.12;
+        %tmp.129 = lgetv %y2.13;
+        %tmp.131 = lgetv %width2.14;
+        %tmp.133 = lgetv %cap.11;
+        %tmp.134 = 1.5;
+        %tmp.135 = mul %tmp.133 %tmp.134;
+        %tmp.136 = 1;
+        %tmp.137 = add %tmp.135 %tmp.136;
+        invoke %tmp.124 %tmp.125(%tmp.127, %tmp.129, %tmp.131, %tmp.137);
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_420_28_stop:
+        goto @C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_420_9_if_end;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_420_9_if_false:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_424_12_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 425 3 ]
+        %tmp.138 = lgetv %dc;
+        %tmp.139 = getv function %tmp.138 :setColor;
+        %tmp.141 = lgetv %greenColor.2;
+        %tmp.142 = -1;
+        invoke %tmp.138 %tmp.139(%tmp.141, %tmp.142);
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_424_12_stop:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_420_9_if_end:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_418_9_if_end:
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_416_2_if_end:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc" 429 5 ]
+        %tmp.143 = lgetv %dc;
+        %tmp.144 = getv function %tmp.143 :fillRectangle;
+        %tmp.146 = lgetv %x.7;
+        %tmp.148 = lgetv %y.8;
+        %tmp.150 = lgetv %height.10;
+        %tmp.151 = 1.0;
+        %tmp.153 = lgetv %battery.6;
+        %tmp.154 = 100.0;
+        %tmp.155 = div %tmp.153 %tmp.154;
+        %tmp.156 = sub %tmp.151 %tmp.155;
+        %tmp.157 = mul %tmp.150 %tmp.156;
+        %tmp.158 = add %tmp.148 %tmp.157;
+        %tmp.160 = lgetv %width.9;
+        %tmp.162 = lgetv %height.10;
+        %tmp.164 = lgetv %battery.6;
+        %tmp.165 = 100.0;
+        %tmp.166 = div %tmp.164 %tmp.165;
+        %tmp.167 = mul %tmp.162 %tmp.166;
+        invoke %tmp.143 %tmp.144(%tmp.146, %tmp.158, %tmp.160, %tmp.167);
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeView_mc_383_39_stop:
+    }
+}
+[ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeView.mc"; @line = 1; ]
+<init> {
+}

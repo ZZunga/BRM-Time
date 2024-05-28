@@ -1,0 +1,65 @@
+[ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeApp.mc"; @line = 1; ]
+import Toybox.Application;
+[ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeApp.mc"; @line = 2; ]
+import Toybox.Background;
+[ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeApp.mc"; @line = 3; ]
+import Toybox.Lang;
+[ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeApp.mc"; @line = 4; ]
+import Toybox.Time;
+[ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeApp.mc"; @line = 5; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeApp.mc"; @line = 7; ]
+class BRMTimeApp extends Application.AppBase{
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeApp.mc"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeApp.mc"; @line = 7; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeApp.mc"; @line = 9; @position = 5; ]
+    var dataField;
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeApp.mc"; @line = 11; ]
+    function initialize() as Void {
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeApp_mc_11_26_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeApp.mc" 12 8 ]
+        %tmp.2 = getv ? :AppBase;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeApp_mc_11_26_stop:
+    }
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeApp.mc"; @line = 16; ]
+    function onStart(state as Dictionary or Null) as Void {
+    }
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeApp.mc"; @line = 20; ]
+    function onStop(state as Dictionary or Null) as Void {
+    }
+    //! Return the initial view of your application here
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeApp.mc"; @line = 24; ]
+    function getInitialView() as Array<Views or InputDelegates> or Null {
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeApp_mc_24_65_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeApp.mc" 25 8 ]
+        %tmp.4 = getv ? :BRMTimeView;
+        %tmp.1 = newc %tmp.4 ();
+        putv self :dataField %tmp.1;
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeApp.mc" 26 2 ]
+        %tmp.5 = newa 1;
+        %tmp.7 = getv ? :dataField;
+        %tmp.8 = dup %tmp.5;
+        %tmp.9 = aputv %tmp.8 0 %tmp.7;
+        ret %tmp.9;
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeApp_mc_24_65_stop:
+    }
+    [ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeApp.mc"; @line = 29; ]
+    function onSettingsChanged() as Void {
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeApp_mc_29_38_start:
+[ "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeApp.mc" 30 2 ]
+        %tmp.2 = getv ? :dataField;
+        %tmp.3 = getv function %tmp.2 :readProperties;
+        invoke %tmp.2 %tmp.3();
+C_Users_USER_OneDrive_자전거_New_CIQ_BRM_Time_source_BRMTimeApp_mc_29_38_stop:
+    }
+}
+[ @file = "C:\Users\USER\OneDrive\자전거\New CIQ\BRM Time\source\BRMTimeApp.mc"; @line = 1; ]
+<init> {
+}

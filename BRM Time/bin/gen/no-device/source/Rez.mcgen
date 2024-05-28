@@ -1,0 +1,48 @@
+import Toybox.Lang;
+using Toybox.WatchUi;
+using Toybox.WatchUi as Ui;
+using Toybox.Graphics;
+using Toybox.Graphics as Gfx;
+
+module Rez {
+    module Drawables {
+        (:initialized) var LauncherIcon as Symbol;
+    } // Drawables
+
+    module Fonts {
+    } // Fonts
+
+    module JsonData {
+    } // JsonData
+
+    module Layouts {
+    } // Layouts
+
+    module Menus {
+    } // Menus
+
+    module Strings {
+        (:initialized) var dispElapsed as Symbol;
+        (:initialized) var appVersion as Symbol;
+        (:initialized) var dispCRSwap as Symbol;
+        (:initialized) var spdUSER as Symbol;
+        (:initialized) var spdGFONDO as Symbol;
+        (:initialized) var dispDF_title as Symbol;
+        (:initialized) var nearDest as Symbol;
+        (:initialized) var spdBRM200 as Symbol;
+        (:initialized) var dispERSwap as Symbol;
+        (:initialized) var topRight_title as Symbol;
+        (:initialized) var battery_title as Symbol;
+        (:initialized) var AppName as Symbol;
+        (:initialized) var spdBRMGR as Symbol;
+        (:initialized) var targetSpeed_title as Symbol;
+        (:initialized) var dist2Dest_title as Symbol;
+        (:initialized) var useDist2Dest_title as Symbol;
+        (:initialized) var spdBRMSR as Symbol;
+        (:initialized) var dispTime as Symbol;
+        (:initialized) var dispRemain as Symbol;
+        (:initialized) var dispCESwap as Symbol;
+        (:initialized) var targetspeed_title as Symbol;
+        (:initialized) var userSPEED_title as Symbol;
+    } // Strings
+} // Rez

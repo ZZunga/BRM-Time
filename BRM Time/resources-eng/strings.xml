@@ -1,0 +1,29 @@
+<strings>
+    <string id="AppName">BRM Time</string>
+	<string id="appVersion">App. Version</string>
+
+	<string id="dispDF_title">Display setting</string>
+	<string id="dispTime">Clock Time</string>
+	<string id="dispRemain">Remaining Times</string>
+	<string id="dispElapsed">Elapsed Times</string>
+	<string id="dispERSwap">Elapsed, Remaining Times</string>
+	<string id="dispCESwap">Clock Time, Elapsed Times</string>
+	<string id="dispCRSwap">Clock Time, Remaining Times</string>
+
+	<string id="targetSpeed_title">Target Speed</string>
+	<string id="spdBRM200">ACP BRM (15kph)</string>
+	<string id="spdBRMGR">ACP1000/LRM1200 (13.33kph)</string>
+	<string id="spdBRMSR">SuperRandonneur (10kph)</string>
+	<string id="spdGFONDO">GrandFondo (18kph)</string>
+	<string id="spdUSER">User settings (1-100kph)</string>
+	<string id="userSPEED_title">Input speed (Integer only)</string>
+
+	<string id="useDist2Dest_title">Use manual distance (Default: read from course)</string>
+	<string id="dist2Dest_title">Input distance to destination (km, Integer only)</string>
+
+	<string id="topRight_title">Top Right settings</string>
+	<string id="battery_title">Battery Status</string>
+	<string id="targetspeed_title">Target Speed</string>
+	
+	<string id="nearDest">Near Dest.</string>
+</strings>
